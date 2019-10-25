@@ -11,7 +11,14 @@ export class App extends Component {
   };
 
   addMovie = (movie) => {
-    this.setState(({ movies }) => ({ movies: [...movies, movie] }));
+    this.setState(({ movies }) => {
+      const isMovieExists = movies
+        .some(({ imdbId }) => imdbId === movie.imdbId);
+
+      return isMovieExists
+        ? null
+        : { movies: [...movies, movie] };
+    });
   };
 
   render() {
