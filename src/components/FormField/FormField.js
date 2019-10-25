@@ -49,7 +49,7 @@ FormField.propTypes = {
   value: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
-  onBlur: PropTypes.func.isRequired,
+  onBlur: PropTypes.func,
   touched: PropTypes.bool.isRequired,
   type: PropTypes.string,
   error: PropTypes.string,
@@ -60,4 +60,5 @@ FormField.defaultProps = {
   type: 'text',
   placeholder: 'Type text here',
   error: '',
+  onBlur: () => {},
 };

@@ -3,6 +3,7 @@ import './App.scss';
 import { MoviesList } from './components/MoviesList';
 import { NewMovie } from './components/NewMovie';
 import data from './data.json';
+import { SearchMovie } from './components/SearchMovie';
 
 export class App extends Component {
   state = {
@@ -19,7 +20,7 @@ export class App extends Component {
     return (
       <div className="page">
         <div className="page-content">
-          { /* Render SearchMovie component here */ }
+          <SearchMovie onAdd={this.addMovie} />
           <MoviesList movies={movies} />
         </div>
         <div className="sidebar">
