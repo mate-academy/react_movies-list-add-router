@@ -2,6 +2,22 @@
 
 ## Task
 
+- Install `react-router-dom` library.
+- Create component `HomePage` and move all content from the `App` there. 
+- Use `HashRouter` or `BrowserRouter`(add `basename={process.env.PUBLIC_URL}` prop for correct work of GitHub pages) in `App`.
+- Create and implement component `MoviePage` which render information about single movie.
+    - fetch data about movie from this component from `http://www.omdbapi.com/?apikey=[yourkey]&i=[id]`(retrieve `id` from url)
+    - choose by self which additional information about movie show on the page
+    - component should have back button which redirect to the `HomePage`
+    - page can have any design you want
+    - you may create any additional components you want
+- Add routes to the `App`.
+    - render `HomePage` only on root url(`/`)
+    - render `MoviePage` on `/movies/:id` url
+- Redirect to the `MoviePage` when click on `MovieCard`.
+- (\*) Create `PageNotFound` component for other invalid routes.
+  Page should contain message and `Link` to the home page. 
+
 ## Workflow
 
 - Fork the repository with task
